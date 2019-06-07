@@ -1,7 +1,8 @@
 'use strict'
 
 const db = require('../server/db')
-const {User} = require('../server/db/models')
+const {User, File} = require('../server/db/models')
+// const {File} = require('../server/db/models')
 
 async function seed() {
   await db.sync({force: true})
@@ -13,6 +14,27 @@ async function seed() {
   ])
 
   console.log(`seeded ${users.length} users`)
+
+  const file = await Promise.all([
+    File.create({
+      fileUpload: '.txt',
+      companyId: 1231232,
+      companyName: 'ICE',
+      sharePriceDate: 2019 / 10 / 10,
+      sharePrice: 3.2,
+      comments: 'The stock forecast predicts murky waters'
+    }),
+
+    File.create({
+      fileUpload: '.csv',
+      companyId: 981273,
+      companyName: 'NYSE',
+      sharePriceDate: 2019 / 11 / 12,
+      sharePrice: 12.12,
+      comments: 'The stock forecast looks good'
+    })
+  ])
+
   console.log(`seeded successfully`)
 }
 

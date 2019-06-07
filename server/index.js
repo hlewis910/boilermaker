@@ -107,6 +107,8 @@ const startListening = () => {
 
 const syncDb = () => db.sync()
 
+// sequelize.sync({force:true})
+
 async function bootApp() {
   await sessionStore.sync()
   await syncDb()

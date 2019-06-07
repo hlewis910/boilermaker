@@ -12,8 +12,12 @@ export class SoloFile extends Component {
     if (file && file.id) {
       return (
         <div key={file}>
-          <h3>{file.sharePriceData}</h3>
+          <h3>{file.sharePriceDate}</h3>
+          <h2>{file.companyId}</h2>
+          <h3>{file.companyName}</h3>
+          <span>{file.sharePrice}</span>
           <h2>{file.fileUpload}</h2>
+          <h1>{file.comments}</h1>
         </div>
       )
     } else {

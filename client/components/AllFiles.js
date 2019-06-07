@@ -14,6 +14,10 @@ export class Files extends Component {
           return (
             <div key={file.id}>
               <h2>{file.sharePriceData}</h2>
+              <h2>{file.companyId}</h2>
+              <h3>{file.companyName}</h3>
+              <span>{file.sharePrice}</span>
+              <h2>{file.fileUpload}</h2>
             </div>
           )
         })}
