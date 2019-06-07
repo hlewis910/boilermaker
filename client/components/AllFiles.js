@@ -13,7 +13,7 @@ export class Files extends Component {
         {this.props.files.map(file => {
           return (
             <div key={file.id}>
-              <h2>{file.sharePriceData}</h2>
+              <h2>{file.sharePriceDate}</h2>
               <h2>{file.companyId}</h2>
               <h3>{file.companyName}</h3>
               <span>{file.sharePrice}</span>
