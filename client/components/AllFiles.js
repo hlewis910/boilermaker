@@ -17,7 +17,7 @@ export class Files extends Component {
               <h2>{file.companyId}</h2>
               <h3>{file.companyName}</h3>
               <span>{file.sharePrice}</span>
-              <h2>{file.fileUpload}</h2>
+              <h2>{file.comments}</h2>
             </div>
           )
         })}

@@ -2,12 +2,12 @@ const Sequelize = require('sequelize')
 const db = require('../db')
 
 const File = db.define('file', {
-  fileUpload: {
-    type: Sequelize.STRING,
-    validate: {
-      isIn: [['.csv', '.txt']]
-    }
-  },
+  // fileUpload: {
+  //   type: Sequelize.STRING,
+  //   validate: {
+  //     isIn: [['.csv', '.txt']]
+  //   }
+  // },
   companyId: {
     type: Sequelize.INTEGER,
     unique: true,
@@ -24,7 +24,7 @@ const File = db.define('file', {
     allowNull: false
   },
   sharePrice: {
-    type: Sequelize.DECIMAL,
+    type: Sequelize.DECIMAL(10, 3),
     unique: true,
     allowNull: false
   },

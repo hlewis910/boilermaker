@@ -6,8 +6,8 @@ const File = require('../models/file')
  *
  *    BlogPost.belongsTo(User)
  */
-File.belongsTo(User)
-User.hasMany(File)
+// File.belongsTo(User)
+// User.hasMany(File)
 
 /**
  * We'll export all of our models here, so that any time a module needs a model,

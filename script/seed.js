@@ -17,19 +17,17 @@ async function seed() {
 
   const file = await Promise.all([
     File.create({
-      fileUpload: '.txt',
       companyId: 1231232,
       companyName: 'ICE',
-      sharePriceDate: 2019 / 10 / 10,
+      sharePriceDate: '2019-12-10',
       sharePrice: 3.2,
       comments: 'The stock forecast predicts murky waters'
     }),
 
     File.create({
-      fileUpload: '.csv',
       companyId: 981273,
       companyName: 'NYSE',
-      sharePriceDate: 2019 / 11 / 12,
+      sharePriceDate: '2019-10-11',
       sharePrice: 12.12,
       comments: 'The stock forecast looks good'
     })
