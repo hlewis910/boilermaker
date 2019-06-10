@@ -2,12 +2,11 @@ import React, {Component} from 'react'
 import papa from 'papaparse'
 
 class Loader extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       csvfile: undefined
     }
-
     this.updateData = this.updateData.bind(this)
   }
 
@@ -45,7 +44,6 @@ class Loader extends Component {
           placeholder={null}
           onChange={this.handleChange}
         />
-        <p />
         <button onClick={this.importCSV}> Upload</button>
       </div>
     )
